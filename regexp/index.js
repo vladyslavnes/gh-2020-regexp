@@ -10,7 +10,7 @@ document.querySelector('#user-form').addEventListener('submit', function (e) {
 
 	const name = document.getElementsByName('full_name')[0].value;
 	console.log(name);
-	const nameValidation = new RegExp(`[${ukrainianLetters}]+ [${ukrainianLetters}]+ [${ukrainianLetters}]+`);
+	const nameValidation = new RegExp(`^[${ukrainianLetters}]+\s+[${ukrainianLetters}]+\s+[${ukrainianLetters}]+$`);
 	let isNameCorrect = nameValidation.test(name);
 
 	// Email - электронный почтовый адрес.
